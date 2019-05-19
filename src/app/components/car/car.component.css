@@ -1,0 +1,96 @@
+a,p {
+    color: white
+}
+
+.container {
+    margin-bottom: 50px;
+}
+
+button {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 100px;
+  width: 30%;
+  font-weight: bold;
+  color: hsl(256, 83%, 48%);
+  font-style: italic;
+  font-size: x-large
+}
+
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 350%;
+  text-align: center
+}
+
+h2,h3,h4,h5 {
+    color: yellow
+}
+
+input {
+    width: 105%;
+    cursor: text;
+    padding-left: 10px;
+    color: #1d82aa;
+    background: springgreen;
+    border: none;
+    border-bottom: 2px solid silver;
+    border-radius: 10% 50%;
+    margin-bottom: 10px;
+}
+
+input:hover,input:active{
+    background: gold
+}
+
+.ability {
+    width: 80%;
+    color: antiquewhite;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    border: double;
+    margin: 10px 10%;
+}
+
+.erase_btn {
+     width: 9%;
+     height: 7%;
+     margin-top: 5px;
+     margin-left: 5px;
+     margin-bottom: 0;
+     font-style: normal;
+     font-size: 0.8em;
+     padding: 5px;
+     line-height: 8px;
+}
+
+#option {
+  width: 105%;
+  cursor: text;
+  padding-left: 10px;
+  color: #1d82aa;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid silver;
+   border-top: 2px solid silver;
+  border-radius: 2%;
+  margin-bottom: 10px;
+}
+
+.edit_button {
+color: antiquewhite;
+text-transform: uppercase;
+font-family: 'Segoe UI',
+Tahoma,
+Geneva,
+Verdana,
+sans-serif;
+font-style: normal;
+border: double;
+margin: 10px 0 10px 25%;
+text-align: center;
+font-size: 0.41cm;
+padding: 2px;
+}

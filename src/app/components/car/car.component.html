@@ -1,0 +1,60 @@
+<div class="container">
+  <h1 class="col mt-5 mb-5">Порівняльні характеристики спорткарів <br> 20ХX років</h1>
+  <br>
+  <h2 class="d-flex ml-auto mr-auto col-md-6"> <mark>Автомобіль:</mark>{{name}} <small>{{model}}</small>
+  </h2>
+  <div class="alert alert-success d-flex ml-auto mr-auto col-md-6">
+    Характеристики автомобіля:
+    <ul>
+      <li><strong>Швидкість:{{speed}}</strong>км/год</li>
+      <li><strong>Колір автомобіля:{{colors.car}}</strong></li>
+      <li><strong>Колір салону:{{colors.salon}}</strong></li>
+      <li><strong>Колір коліс:{{colors.wheels}}</strong></li>
+    </ul>
+  </div>
+
+
+ <h5 class="d-flex ml-auto mr-auto col-md-6">Редагування об'єкту:</h5>
+<button class="edit_button d-flex col-md-2   btn btn-info" (click)="showEdit()">Редагувати</button>
+
+ <form *ngIf=isEdit class='d-flex ml-auto mr-auto col-md-6' (submit)="addOpt(option.value)" action="">
+   <div class="form-group">
+     <input type="text" placeholder="Назва автомобіля..." class="form control" [(ngModel)]="name" name="name"> <br>
+     <input type="text" placeholder="Модель автомобіля..." class="form control" [(ngModel)]="model" name="model"> <br>
+     <input type="number" placeholder="Швидкість..." class="form control" [(ngModel)]="speed" name="speed"> <br>
+     <input type="text" placeholder="Колір автомобіля..." class="form control" [(ngModel)]="colors.car"
+       name="colors.car">
+     <br>
+     <input type="text" placeholder="Колір салону..." class="form control" [(ngModel)]="colors.salon" name="salon"> <br>
+     <input type="text" placeholder="Колір коліс..." class="form control" [(ngModel)]="colors.wheels" name="wheels">
+     <br>
+   </div>
+ </form>
+
+
+<h4 class="d-flex ml-auto mr-auto col-md-6">Можливості автомобіля:</h4>
+ <form class='d-flex ml-auto mr-auto col-md-6' (submit)="addOpt(option.value)">
+   <div class="form-group">
+     <label for="option">
+       <h5>Додавання нової можливості:</h5>
+     </label> <br>
+     <input type="text" id="option" placeholder="введіть щось..." class="form control" #option> <br>
+     <button type="submit" class="ability btn btn-outline-success">ДОБАВИТИ</button>
+   </div>
+ </form>
+
+  <div class="alert alert-warning  ml-auto mr-auto col-md-6">
+    <ul>
+      <li *ngFor="let option of options; let i = index">{{i+1}} - {{option}}
+        <button class="erase_btn btn btn-warning btn-sm"(click)="deleteOpt(option)">X</button>
+      </li>
+    </ul>
+  </div>
+
+  <h5 class="d-flex ml-auto mr-auto col-md-6">Виберіть автомобіль</h5>
+  <div class="d-flex ml-auto mr-auto col-md-6">
+  <button class="btn btn-danger" (click)="carSelect('tesla')">Tesla</button>
+  <button class="btn btn-success" (click)="carSelect('ferrari')">Ferrari</button>
+  <button class="btn btn-info" (click)="carSelect('mercedes')">Mercedes</button>
+  </div>
+</div>
